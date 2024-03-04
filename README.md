@@ -4,7 +4,7 @@
 
 ## 1. 조원 편성
 
-zero-base DS22기 __한결__</br>
+zero-base DS22기 __한결__ $~$ [\[GitHub\] braveveigar](https://github.com/braveveigar)</br>
 
 zero-base DS22기 __강석순__</br>
 
