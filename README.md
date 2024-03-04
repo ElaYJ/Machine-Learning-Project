@@ -1,4 +1,4 @@
-# zero-base DS22기 Machine Learning Project
+# zero-base DS 22기 Machine Learning Project
 
 </br>
 
@@ -16,7 +16,7 @@ zero-base DS22기 __오준명__</br>
 
 ## 2. 주제 선정
 
-- [DS 22기 머신러닝 기획 $~\text{PPT}$](https://docs.google.com/presentation/d/1cWP17Z0Hk-BqAJht9h9aiWBItvariBgw2avSzQKTtkw/edit#slide=id.g2bf15272f22_0_35)
+- [DS 22기 머신러닝 기획 PPT](https://docs.google.com/presentation/d/1cWP17Z0Hk-BqAJht9h9aiWBItvariBgw2avSzQKTtkw/edit#slide=id.g2bf15272f22_0_35)
 
 
 <br></br>
