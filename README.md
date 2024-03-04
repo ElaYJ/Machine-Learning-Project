@@ -6,11 +6,11 @@
 
 zero-base DS22기 __한결__ $~$ [\[GitHub\] braveveigar](https://github.com/braveveigar)</br>
 
-zero-base DS22기 __강석순__ $~$ [\[GitHub\] ojm2020](https://github.com/ojm2020)</br>
+zero-base DS22기 __강석순__</br>
 
-zero-base DS22기 __손윤재__</br>
+zero-base DS22기 __손윤재__ $~$ [\[GitHub\] ElaYJ](https://github.com/ElaYJ)</br>
 
-zero-base DS22기 __오준명__</br>
+zero-base DS22기 __오준명__ $~$ [\[GitHub\] ojm2020](https://github.com/ojm2020)</br>
 
 </br>
 
