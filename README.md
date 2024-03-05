@@ -6,7 +6,7 @@
 
 zero-base DS22기 __한결__ $~$ [\[GitHub\] braveveigar](https://github.com/braveveigar)</br>
 
-zero-base DS22기 __강석순__</br>
+zero-base DS22기 __강석순__ $~$ [\[GitHub\] sainteye01](https://github.com/sainteye01)</br>
 
 zero-base DS22기 __손윤재__ $~$ [\[GitHub\] ElaYJ](https://github.com/ElaYJ)</br>
 
