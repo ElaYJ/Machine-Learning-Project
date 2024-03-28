@@ -6,8 +6,6 @@
 
 zero-base DS22기 __한결__ $~$ [\[GitHub\] braveveigar](https://github.com/braveveigar)</br>
 
-zero-base DS22기 __강석순__ $~$ [\[GitHub\] sainteye01](https://github.com/sainteye01)</br>
-
 zero-base DS22기 __손윤재__ $~$ [\[GitHub\] ElaYJ](https://github.com/ElaYJ)</br>
 
 zero-base DS22기 __오준명__ $~$ [\[GitHub\] ojm2020](https://github.com/ojm2020)</br>
@@ -48,6 +46,6 @@ zero-base DS22기 __오준명__ $~$ [\[GitHub\] ojm2020](https://github.com/ojm2
 
 <br></br>
 
-## 4. 분석 보고서
+## 4. 프로젝트 PPT
 
-
+- [프로젝트 최종 리포트](https://docs.google.com/presentation/d/1zZ0fsw5Es8AKeVmmUfEDt4fwiR-QyeW-Pq_AoP-w4is/edit?usp=sharing)
