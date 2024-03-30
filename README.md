@@ -39,7 +39,7 @@ zero-base DS22기 __오준명__ $~$ [\[GitHub\] ojm2020](https://github.com/ojm2
 
 </br>
 
-#### 3️⃣ Machine Learning Model
+#### 3️⃣ Machine Learning 예측 모델
 
 
 
