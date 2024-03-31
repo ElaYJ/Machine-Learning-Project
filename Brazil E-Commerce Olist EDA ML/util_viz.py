@@ -5,9 +5,9 @@ def format_spines(ax, right_ax=False, top_ax=False):
     ax.spines['bottom'].set_color('#CCCCCC') #--> 라이트 그레이(Light Gray)
     ax.spines['left'].set_color('#CCCCCC')
     if top_ax:
-        ax.spines['top'].set_visible(False) #--> top 축은 그리지 않는다.
-    else:
         ax.spines['top'].set_color('#CCCCCC')
+    else:
+        ax.spines['top'].set_visible(False) #--> top 축은 그리지 않는다.
     if right_ax:
         ax.spines['right'].set_color('#CCCCCC')
     else:

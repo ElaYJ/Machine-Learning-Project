@@ -6,23 +6,6 @@ import pandas as pd
 # 데이터 전처리
 from sklearn.preprocessing import LabelEncoder
 
-
-def get_outlier(df=None, column=None, weight=1.5):
-    fraud = df[df['re_order']==0][column]
-    quantile_25 = np.percentile(fraud.values, 25)
-    quantile_75 = np.percentile(fraud.values, 75)
-    
-    iqr = quantile_75 - quantile_25
-    iqr_weight = iqr * weight
-    lowest_val = quantile_25 - iqr_weight
-    highest_val = quantile_75 + iqr_weight
-    
-    outlier_index = fraud[(fraud < lowest_val) | (fraud > highest_val)].index.to_list()
-    
-    return outlier_index
-
-
-
 def label_encoding(df, cols):
     le = LabelEncoder()
     for col in cols:
@@ -63,6 +46,7 @@ def get_gscv_best_model(X, y, clf=None, params=None, scoring='f1_macro', report=
 
 
 # 성능 지표
+import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 from sklearn.metrics import classification_report
@@ -70,15 +54,17 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_curve
 
 
-# One Model ---------------------------------------------------------------------------
+def get_clf_scores(y_test, pred):
+    acc = accuracy_score(y_test, pred)
+    precis = precision_score(y_test, pred)
+    recall = recall_score(y_test, pred)
+    f1 = f1_score(y_test, pred)
+    auc = roc_auc_score(y_test, pred)
+    
+    return acc, precis, recall, f1, auc
+
 
 def print_clf_scores(y_test, pred_test):
-	# print(' Accuracy :', accuracy_score(y_test, pred_test))
-	# print(' Percision:', precision_score(y_test, pred_test))
-	# print(' Recall:', recall_score(y_test, pred_test))
-	# print(' F1 Score:', f1_score(y_test, pred_test))
-	# print(' AUC Score:', roc_auc_score(y_test, pred_test))
-	
 	print(' Accuracy: {0:.4f},  Precision: {1:.4f}'.format(
 		accuracy_score(y_test, pred_test), precision_score(y_test, pred_test)
 	))
@@ -97,7 +83,7 @@ def show_classification_report(y_test=None, pred_test=None, confusion=False):
     if confusion:
         print('《confusion matrix》')
         print(confusion_matrix(y_test, pred_test))
-        print('='*57)
+        print('='*55)
         print_clf_scores(y_test, pred_test)
 
 
@@ -120,37 +106,6 @@ def show_roc_curve(model_clf, X_test, y_test, show_rlt=False):
 	plt.grid()
 	plt.show()
 
-
-
-# Models ------------------------------------------------------------------------------
-
-def get_clf_scores(y_test, pred):
-    acc = accuracy_score(y_test, pred)
-    precis = precision_score(y_test, pred)
-    recall = recall_score(y_test, pred)
-    f1 = f1_score(y_test, pred)
-    auc = roc_auc_score(y_test, pred)
-    
-    return acc, precis, recall, f1, auc
-
-
-def get_result(model, X_train, y_train, X_test, y_test):
-    model.fit(X_train, y_train)
-    pred = model.predict(X_test)
-    
-    return get_clf_scores(y_test, pred)
-
-
-def get_results_df(models, X_train, y_train, X_test, y_test):
-    col_names = ['accuracy', 'precision', 'recall', 'F1', 'roc_auc']
-    
-    results = []
-    model_names = []
-    for name, model in models:
-        results.append(get_result(model, X_train, y_train, X_test, y_test))
-        model_names.append(name)
-    
-    return pd.DataFrame(results, columns=col_names, index=model_names)
 
 
 def show_models_roc(models, X_test, y_test, score=False):
